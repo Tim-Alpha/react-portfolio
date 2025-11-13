@@ -1,0 +1,30 @@
+.about {
+  background-color: var(--bg-secondary);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-cta {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
