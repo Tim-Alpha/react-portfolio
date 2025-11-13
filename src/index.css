@@ -47,6 +47,17 @@ html {
   * {
     -webkit-overflow-scrolling: touch;
   }
+
+  /* Add padding to prevent content from being hidden behind bottom nav */
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 65px;
+  }
 }
 
 a {
