@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Contact.css';
 
 const Contact = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ triggerOnce: true });
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation({ triggerOnce: true, rootMargin: '0px 0px -50px 0px' });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,8 +29,16 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section">
       <div className="container">
-        <h2 className="section-title">Contact</h2>
-        <div className="contact-content">
+        <h2 
+          ref={titleRef}
+          className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
+        >
+          Contact
+        </h2>
+        <div 
+          ref={contentRef}
+          className={`contact-content fade-in ${contentVisible ? 'visible' : ''}`}
+        >
           <div className="contact-form-container">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">

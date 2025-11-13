@@ -1,3 +1,4 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Projects.css';
 
 interface Project {
@@ -70,14 +71,22 @@ const projects: Project[] = [
   }
 ];
 
-const Projects = () => {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
+  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation({ 
+    triggerOnce: true, 
+    rootMargin: '0px 0px -100px 0px' 
+  });
+
   return (
-    <section id="projects" className="projects section">
-      <div className="container">
-        <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
+    <div 
+      ref={cardRef}
+      className={`project-card scale-in ${cardVisible ? 'visible' : ''} stagger-delay-${(index % 4) + 1}`}
+    >
               <div className="project-image">
                 {project.image ? (
                   <img 
@@ -127,7 +136,29 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </div>
+    </div>
+  );
+};
+
+const Projects = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ triggerOnce: true });
+  const { elementRef: gridRef, isVisible: gridVisible } = useScrollAnimation({ triggerOnce: true, rootMargin: '0px 0px -50px 0px' });
+
+  return (
+    <section id="projects" className="projects section">
+      <div className="container">
+        <h2 
+          ref={titleRef}
+          className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
+        >
+          Projects
+        </h2>
+        <div 
+          ref={gridRef}
+          className={`projects-grid fade-in ${gridVisible ? 'visible' : ''}`}
+        >
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>

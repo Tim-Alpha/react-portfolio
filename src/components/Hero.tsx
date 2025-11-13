@@ -1,3 +1,4 @@
+import { useParallax } from '../hooks/useParallax';
 import './Hero.css';
 
 const Hero = () => {
@@ -8,11 +9,16 @@ const Hero = () => {
     }
   };
 
+  const parallaxOffset = useParallax(0.3);
+
   return (
     <section id="hero" className="hero">
       <div className="container">
         <div className="hero-content">
-          <div className="hero-image-container">
+          <div 
+            className="hero-image-container parallax-element"
+            style={{ transform: `translateY(${parallaxOffset}px)` }}
+          >
             <div className="hero-image-wrapper">
               <img 
                 src="/profile.jpg" 

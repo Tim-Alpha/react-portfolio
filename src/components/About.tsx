@@ -1,11 +1,23 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './About.css';
 
 const About = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ triggerOnce: true });
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation({ triggerOnce: true, rootMargin: '0px 0px -100px 0px' });
+
   return (
     <section id="about" className="about section">
       <div className="container">
-        <h2 className="section-title">About</h2>
-        <div className="about-content">
+        <h2 
+          ref={titleRef}
+          className={`section-title fade-in ${titleVisible ? 'visible' : ''}`}
+        >
+          About
+        </h2>
+        <div 
+          ref={contentRef}
+          className={`about-content fade-in ${contentVisible ? 'visible' : ''}`}
+        >
           <div className="about-text">
             <p className="about-description">
               I'm a full stack web developer with industrial experience in building scalable, high-performance web applications.
