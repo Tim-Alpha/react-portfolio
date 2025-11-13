@@ -24,10 +24,29 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection in content areas */
+p, span, h1, h2, h3, h4, h5, h6, a, li {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Improve scrolling on mobile */
+@media (max-width: 768px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 a {
@@ -43,6 +62,18 @@ a:hover {
 button {
   cursor: pointer;
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: rgba(0, 255, 136, 0.2);
+  touch-action: manipulation;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve button touch targets on mobile */
+@media (max-width: 768px) {
+  button, .btn, a.btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
 }
 
 .container {
@@ -70,12 +101,52 @@ button {
   background-clip: text;
 }
 
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+/* Tablet styles */
+@media (max-width: 968px) {
+  .container {
+    padding: 0 30px;
   }
   
   .section {
-    padding: 60px 0;
+    padding: 70px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section {
+    padding: 50px 0;
+    min-height: auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 }

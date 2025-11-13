@@ -23,8 +23,35 @@
 }
 
 @media (max-width: 768px) {
+  .about-content {
+    padding: 0 0.5rem;
+  }
+
   .about-description {
     font-size: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .about-cta {
+    margin-top: 1.5rem;
+  }
+
+  .about-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-cta .btn {
+    max-width: 100%;
+    padding: 0.85rem 1.5rem;
   }
 }
 
