@@ -12,6 +12,16 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="container">
         <div className="hero-content">
+          <div className="hero-image-container">
+            <div className="hero-image-wrapper">
+              <img 
+                src="/profile.jpg" 
+                alt="Sachin Kinha" 
+                className="hero-image"
+              />
+              <div className="hero-image-glow"></div>
+            </div>
+          </div>
           <div className="hero-text">
             <h1 className="hero-title">
               Hi, I'm <span className="highlight">Sachin Kinha</span>
