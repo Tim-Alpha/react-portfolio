@@ -231,7 +231,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 70px;
+    padding-top: 20px;
     min-height: auto;
     padding-bottom: 40px;
   }
@@ -285,7 +285,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 60px;
+    padding-top: 20px;
     padding-bottom: 30px;
   }
 
