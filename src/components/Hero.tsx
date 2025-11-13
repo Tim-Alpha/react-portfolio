@@ -29,6 +29,7 @@ const Hero = () => {
             <h2 className="hero-subtitle">Full Stack Web Developer</h2>
             <p className="hero-description">
               Building clean, fast, and scalable web applications with modern technologies.
+              Specialized in database scaling, AI-powered systems, and blockchain solutions.
               I enjoy turning complex problems into simple, elegant solutions.
             </p>
             <div className="hero-buttons">

@@ -31,15 +31,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend',
-      skills: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Vue.js', 'HTML/CSS']
+      skills: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Vue.js', 'HTML/CSS', 'JavaScript']
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST API', 'GraphQL']
+      skills: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'PostgreSQL', 'REST API', 'Docker']
     },
     {
-      title: 'Tools',
-      skills: ['Redis', 'Git', 'Docker', 'AWS', 'Linux', 'VS Code']
+      title: 'Database & DevOps',
+      skills: ['MySQL Replication', 'Redis', 'Docker', 'Database Scaling', 'Master-Slave Architecture']
+    },
+    {
+      title: 'AI & Blockchain',
+      skills: ['Python', 'Machine Learning', 'Solidity', 'Web3', 'Smart Contracts', 'AI Integration']
+    },
+    {
+      title: 'Tools & Others',
+      skills: ['Git', 'AWS', 'Linux', 'VS Code', 'Email Automation', 'IMAP', 'Video Processing']
     }
   ];
 

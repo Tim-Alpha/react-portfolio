@@ -8,16 +8,25 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-description">
-              I'm a full stack web developer with industrial experience in building modern web applications.
-              I specialize in creating performant and maintainable applications using cutting-edge technologies.
+              I'm a full stack web developer with industrial experience in building scalable, high-performance web applications.
+              With <strong>100+ repositories</strong> on GitHub, I've worked on diverse projects ranging from database scaling architectures
+              to AI-powered systems and blockchain applications.
             </p>
             <p className="about-description">
-              I enjoy turning complex problems into simple, elegant solutions. My passion lies in writing clean code,
-              learning new technologies, and contributing to open-source projects.
+              My expertise includes designing and implementing <strong>Master-Slave database architectures</strong> for high availability,
+              building <strong>AI-powered platforms</strong> for co-founder matching, developing <strong>automated email systems</strong>,
+              and creating <strong>smart contract solutions</strong> on blockchain. I specialize in creating performant, maintainable
+              applications using cutting-edge technologies.
             </p>
             <p className="about-description">
-              When I'm not coding, you can find me exploring new frameworks, contributing to GitHub projects,
-              or sharing knowledge with the developer community.
+              I've contributed to projects involving <strong>video processing, recommendation systems, smart contract development,
+              and large-scale web applications</strong>. My work demonstrates proficiency in both frontend and backend development,
+              with a strong focus on scalability, performance optimization, and clean architecture.
+            </p>
+            <p className="about-description">
+              When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects,
+              or sharing knowledge with the developer community. I'm passionate about solving complex problems and
+              turning them into elegant, production-ready solutions.
             </p>
             <div className="about-cta">
               <a 
