@@ -92,6 +92,29 @@ To customize this portfolio for your own use:
 4. Modify colors in `src/index.css` CSS variables
 5. Update social links in `Header.tsx`, `Hero.tsx`, `Contact.tsx`, and `Footer.tsx`
 
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+The easiest way to deploy this portfolio is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com/new)
+3. Vercel will automatically detect it's a Vite project
+4. Click "Deploy" and your site will be live!
+
+The `vercel.json` configuration file is already included for optimal deployment settings.
+
+### Manual Deployment
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. The `dist` folder contains the production-ready files
+3. Deploy the `dist` folder to your hosting provider
+
 ## 📝 License
 
 This project is open source and available under the MIT License.
