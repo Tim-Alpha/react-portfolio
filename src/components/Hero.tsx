@@ -1,7 +1,11 @@
 import { useParallax } from '../hooks/useParallax';
 import './Hero.css';
 
-const Hero = () => {
+interface HeroProps {
+  onOpenDocs: () => void;
+}
+
+const Hero = ({ onOpenDocs }: HeroProps) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -53,6 +57,13 @@ const Hero = () => {
               >
                 View GitHub
               </a>
+              <button 
+                className="btn btn-secondary"
+                onClick={onOpenDocs}
+                title="View Project Documentation"
+              >
+                📖 Documentation
+              </button>
             </div>
             <div className="hero-social">
               <a 

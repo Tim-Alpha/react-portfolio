@@ -1,6 +1,10 @@
 import './Footer.css';
 
-const Footer = () => {
+interface FooterProps {
+  onOpenDocs: () => void;
+}
+
+const Footer = ({ onOpenDocs }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,6 +38,17 @@ const Footer = () => {
               className="footer-link"
             >
               Telegram
+            </a>
+            <a 
+              href="#docs" 
+              onClick={(e) => { 
+                e.preventDefault(); 
+                onOpenDocs();
+              }}
+              className="footer-link footer-readme-link"
+              title="View Project Documentation"
+            >
+              📖 Documentation
             </a>
           </div>
         </div>

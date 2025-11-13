@@ -26,10 +26,10 @@
   border: none;
   color: var(--text-secondary);
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.5rem;
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
-  min-width: 60px;
+  min-width: 50px;
   flex: 1;
   position: relative;
 }
@@ -59,7 +59,7 @@
 }
 
 .bottom-nav-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 500;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -80,7 +80,7 @@
 
 .bottom-nav-item.active .bottom-nav-label {
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.67rem;
 }
 
 .bottom-nav-item:not(.active):hover {
@@ -101,21 +101,21 @@
   }
 
   .bottom-nav-item {
-    padding: 0.4rem 0.5rem;
-    min-width: 50px;
+    padding: 0.35rem 0.4rem;
+    min-width: 45px;
   }
 
   .bottom-nav-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .bottom-nav-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
 
   .bottom-nav-item.active .bottom-nav-label {
-    font-size: 0.67rem;
+    font-size: 0.62rem;
   }
 }
 

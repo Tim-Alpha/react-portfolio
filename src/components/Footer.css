@@ -32,6 +32,12 @@
   color: var(--accent);
 }
 
+.footer-readme-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 1.5rem 0 5rem 0;

@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
 
-const Header = () => {
+interface HeaderProps {
+  onOpenDocs: () => void;
+}
+
+const Header = ({ onOpenDocs }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,6 +34,7 @@ const Header = () => {
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
             <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>Projects</a></li>
             <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>Skills</a></li>
+            <li><a href="#docs" onClick={(e) => { e.preventDefault(); onOpenDocs(); }}>Docs</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           </ul>
         </nav>
